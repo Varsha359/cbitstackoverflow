@@ -1,0 +1,15 @@
+{% extends "stackoverflow/home.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<br><br>
+  <h1 class="heading">Profile : </h1><br>
+    <div class="data">
+          <h4>
+            Username : {{ user.username }}</h4>
+          <h4>
+            Email id : {{ user.email }}</h4>
+        </div>
+      </div>
+      <!-- FORM HERE -->
+    </div>
+{% endblock content %}

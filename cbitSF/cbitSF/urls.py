@@ -15,7 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls.static import static
+from django.conf import settings
+from django.contrib.auth import views as auth_views
+from stackoverflow import views as stackoverflow_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',stackoverflow_views.home,name='home'),
+    path('base',stackoverflow_views.base,name = 'base'),
+    path('register/', stackoverflow_views.register, name='register'),
+    path('profile/', stackoverflow_views.profile, name='profile'),
+    path('login/', auth_views.LoginView.as_view(template_name='stackoverflow/login.html'), name='login'),
+    path('logout/', auth_views.LogoutView.as_view(template_name='stackoverflow/logout.html'), name='logout'),
+    path('qa',stackoverflow_views.qa,name='qa'),
 ]
