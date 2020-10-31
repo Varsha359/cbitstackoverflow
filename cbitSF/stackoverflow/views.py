@@ -3,6 +3,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm
 
+
+
 def home(request):
     return render(request,'stackoverflow/base.html')
 
@@ -27,4 +29,8 @@ def profile(request):
     return render(request, 'stackoverflow/profile.html')
 
 def qa(request):
+
     return render(request,'stackoverflow/qa.html')
+
+
+

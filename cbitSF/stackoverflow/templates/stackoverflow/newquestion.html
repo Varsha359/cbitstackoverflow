@@ -1,6 +1,6 @@
 {% extends "stackoverflow/home.html" %}
 {% block content %}
-    <br><br>
+    
     <form action="/question/new/" method="post">
         {% csrf_token %}
         <div class="form-group">
